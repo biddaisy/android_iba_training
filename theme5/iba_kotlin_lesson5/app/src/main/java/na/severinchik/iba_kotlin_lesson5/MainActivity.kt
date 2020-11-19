@@ -1,29 +1,25 @@
 package na.severinchik.iba_kotlin_lesson5
 
-import android.content.Intent
 import android.content.res.Configuration
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.FrameLayout
-import androidx.fragment.app.FragmentManager.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
 import na.severinchik.iba_kotlin_lesson5.basics.BlankFragment
-import na.severinchik.iba_kotlin_lesson5.basics.EmptyFragment
-import na.severinchik.iba_kotlin_lesson5.basics.LifeCycleFragment
+import na.severinchik.iba_kotlin_lesson5.basics.TestFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var blankFragment: BlankFragment
-    val TAG:String = "Lifecycle"
+    val TAG: String = "Lifecycle"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d(TAG, "onCreate: Activity")
 
-        var trasaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-        trasaction.add(R.id.container, LifeCycleFragment(), "LifecycleFragment")
-        trasaction.add(R.id.container2, BlankFragment.newInstance("prm1","prm2"), "EmptyFragment")
+        val trasaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        trasaction.add(R.id.container, TestFragment(), "TestFragment")
+        //trasaction.add(R.id.container2, BlankFragment.newInstance("prm1","prm2"), "EmptyFragment")
         trasaction.commit()
         blankFragment = BlankFragment()
 
@@ -33,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             var trasaction: FragmentTransaction = supportFragmentManager.beginTransaction()
             trasaction.add(R.id.container2, blankFragment, "LifecycleFragment")
             trasaction.commit()
-            }
+        }
 
 //        startActivity(Intent(this,BottomNavActivity::class.java))
 //        startActivity(Intent(this, DrawerActivity::class.java))
@@ -62,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         Log.d(TAG, "onResume: Activity")
     }
+
     override fun onPause() {
         super.onPause()
         Log.d(TAG, "onPause: Activity")
