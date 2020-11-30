@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">lesson7</string>
+    <string name="about">About</string>
+    <string name="item1">Item1</string>
+    <string name="item2">Item2</string>
+    <string name="subitem1">SubItem1</string>
+    <string name="subitem2">SubItem2</string>
+    <string name="subitem3">SubItem3</string>
+</resources>

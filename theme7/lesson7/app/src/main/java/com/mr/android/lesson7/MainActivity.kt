@@ -1,21 +1,18 @@
-package na.severinchik.iba_kotlin_lesson7
+package com.mr.android.lesson7
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import kotlinx.coroutines.runBlocking
-import java.util.EnumSet.range
 
 class MainActivity : AppCompatActivity() {
-    var string:String = ""
+
     private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,25 +34,16 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.subitem1 -> {
-                navController.navigate(R.id.action_global_dialogsFragment)
                 true
             }
             R.id.subitem2 -> {
                 navController.navigate(R.id.action_global_itemFragment)
                 true
             }
-            R.id.subitem3 ->{
-                navController.navigate(R.id.action_global_JSOnFragment)
-                true
-            }
-            R.id.menu_group_red, R.id.menu_group_green -> {
-                item.isChecked = !item.isChecked
-                Toast.makeText(this, item.title, Toast.LENGTH_LONG).show()
+            R.id.subitem3 -> {
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
-
-
 }
