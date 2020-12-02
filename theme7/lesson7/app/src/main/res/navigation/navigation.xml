@@ -10,7 +10,16 @@
         android:name="com.mr.android.lesson7.ItemFragment"
         android:label="fragment_item_list"
         tools:layout="@layout/fragment_item_list" />
-
-    <action android:id="@+id/action_global_itemFragment" app:destination="@id/itemFragment" />
+    <fragment
+        android:id="@+id/dialogsFragment"
+        android:name="com.mr.android.lesson7.DialogsFragment"
+        android:label="fragment_dialogs"
+        tools:layout="@layout/fragment_dialogs" />
+    <action
+        android:id="@+id/action_global_itemFragment"
+        app:destination="@id/itemFragment" />
+    <action
+        android:id="@+id/action_global_dialogsFragment"
+        app:destination="@id/dialogsFragment" />
 
 </navigation>

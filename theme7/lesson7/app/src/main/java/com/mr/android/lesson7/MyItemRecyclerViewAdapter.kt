@@ -1,10 +1,7 @@
 package com.mr.android.lesson7
 
 import android.content.Context
-import android.view.ContextMenu
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -45,11 +42,9 @@ class MyItemRecyclerViewAdapter(
             view: View?,
             contextMenuInfo: ContextMenu.ContextMenuInfo?
         ) {
-
-            /*val inflater = MenuInflater(context)
+            val inflater = MenuInflater(context)
             inflater.inflate(R.menu.main_activity_optional_menu, contextMenu)
-
-            contextMenu?.add(Menu.NONE, R.id.context_menu_select, adapterPosition, "Select")*/
+            contextMenu?.add(Menu.NONE, R.id.context_menu_select, adapterPosition, "Select")
         }
 
 

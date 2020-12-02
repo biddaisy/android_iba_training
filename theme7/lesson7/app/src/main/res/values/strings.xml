@@ -6,4 +6,14 @@
     <string name="subitem1">SubItem1</string>
     <string name="subitem2">SubItem2</string>
     <string name="subitem3">SubItem3</string>
+    <string name="item_1">Item 1</string>
+    <string name="item_2">Item 2</string>
+    <string name="dialog">Dialog</string>
+    <string name="alertdialog">AlertDialog</string>
+    <string name="timepicker">TimePicker</string>
+    <string name="dialogview">Text</string>
+    <string name="datepicker">DatePicker</string>
+    <string name="fragmentdialog">FragmentDialog</string>
+    <string name="dialog_message">ALARM!!!</string>
+    <string name="dialog_title">AlertDialog</string>
 </resources>

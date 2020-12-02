@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/medium_padding"
+        tools:context=".DialogsFragment">
+
+        <TextView
+            android:id="@+id/output_textView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_size"
+            android:gravity="center"
+            tools:text="@string/dialogview" />
+
+        <Button
+            android:id="@+id/button_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_size"
+            android:text="@string/dialog" />
+
+    </LinearLayout>
+</layout>

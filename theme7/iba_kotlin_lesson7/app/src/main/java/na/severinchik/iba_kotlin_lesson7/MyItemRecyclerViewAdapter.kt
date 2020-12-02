@@ -1,15 +1,10 @@
 package na.severinchik.iba_kotlin_lesson7
 
 import android.content.Context
-import android.util.Log
 import android.view.*
-import androidx.recyclerview.widget.RecyclerView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-
+import androidx.recyclerview.widget.RecyclerView
 import na.severinchik.iba_kotlin_lesson7.dummy.DummyContent.DummyItem
-import java.util.zip.Inflater
 
 /**
  * [RecyclerView.Adapter] that can display a [DummyItem].
@@ -36,7 +31,7 @@ class MyItemRecyclerViewAdapter(
     override fun getItemCount(): Int = values.size
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view),
-        View.OnCreateContextMenuListener{
+        View.OnCreateContextMenuListener {
         init {
             view.setOnCreateContextMenuListener(this)
         }
@@ -56,12 +51,8 @@ class MyItemRecyclerViewAdapter(
 
             val inflater = MenuInflater(context)
             inflater.inflate(R.menu.main_activity_optional_menu, contextMenu)
-
-            contextMenu?.add(Menu.NONE, R.id.context_menu_select,adapterPosition,"Select")
-//            contextMenu?.add(Menu.NONE, R.id.context_menu_delete,adapterPosition,"Delete")
+            contextMenu?.add(Menu.NONE, R.id.context_menu_select, adapterPosition, "Select")
         }
-
-
 
     }
 }
