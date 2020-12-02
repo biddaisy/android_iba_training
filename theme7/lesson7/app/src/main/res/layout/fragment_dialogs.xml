@@ -27,5 +27,16 @@
             android:layout_height="@dimen/default_button_size"
             android:text="@string/dialog" />
 
+        <Button
+            android:id="@+id/button_alert_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_size"
+            android:text="@string/alertdialog" />
+
+        <Button
+            android:id="@+id/button_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_size"
+            android:text="@string/timepicker" />
     </LinearLayout>
 </layout>
